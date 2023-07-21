@@ -1,16 +1,15 @@
-name: "ENV variable DEmo"
+name: "ENV variable Demo"
 
-on: [workflow_dispatch]
+on:
+  workflow_dispatch:
 
 jobs:
- custom_demo:
-   runs-on: ubuntu-latest
-   
-   steps:
-    - name: set the value
-      id: step_on
-      run: echo " this is a variable value" >> $ENV_VAR
-      
-    - name: Display the variable
-      id: step_two
-      run: echo ${{ ENV_VAR }}
+  custom_demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set the value
+        run: echo "this is a variable value" >> $GITHUB_ENV
+
+      - name: Display the variable
+        run: echo ${{ env.ENV_VAR }}
