@@ -4,12 +4,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  custom_demo:
+  Ubuntu_ENV:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Set the value
-        run: echo "ENV_VA=this is a variable value" >> $GITHUB_ENV
+      - name: Linux env
+        run: env
 
-      - name: Display the variable
-        run: echo $ENV_VA
+  Windows_ENV:
+    runs-on: windows-latest
+    steps:
+      - name: windows env
+        run: env
