@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Set the value
-        run: echo "ENV_VAR=this is a variable value" >> $GITHUB_ENV
+        run: echo "ENV_VA=this is a variable value" >> $GITHUB_ENV
 
       - name: Display the variable
-        run: echo $ENV_VAR
+        run: echo $ENV_VA
