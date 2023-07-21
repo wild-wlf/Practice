@@ -13,4 +13,4 @@ jobs:
       
     - name: Display the variable
       id: step_two
-      run: echo ${{ENV_VAR}}
+      run: echo ${{ ENV_VAR }}
