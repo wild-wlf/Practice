@@ -1,17 +1,7 @@
-name: "ENV variable Demo"
+name: "Artifact Demo"
 
 on:
-  workflow_dispatch:
-
+ workflow_dispatch
 jobs:
-  Ubuntu_ENV:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Linux env
-        run: env
-
-  Windows_ENV:
-    runs-on: windows-latest
-    steps:
-      - name: windows env
-        run: env
+    job1:
+      runs-on:  
